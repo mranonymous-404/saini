@@ -1,0 +1,80 @@
+extends base.pug
+block scripts
+  script(src="../static/contact.js")
+  script(src="../static/aos.js")
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js')
+  script(type='text/javascript', src='../static/jquery-3.3.1.min.js')
+  script(type='text/javascript', src='../static/floating-wpp.min.js')
+block style
+  link(rel='stylesheet', href='../static/floating-wpp.min.css')
+  style
+    include ../static/style.css 
+    include ../static/contact.css   
+    include ../static/success.css
+    include ../static/aos.css
+
+block content
+  #myDiv
+  div#containern
+    div.image
+      div.main
+        h1 Contact Us
+    section.offices
+      if (messageq === true)
+        .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+          strong Success!
+          |  Your message is submitted successfully.
+          button.close(type='button', data-dismiss='alert', aria-label='Close')
+            span(aria-hidden='true') ×
+      h1 Office Address
+      div#box4
+        div.office
+          h2 Registered Office
+          div.off1
+            div.img3
+              img(src="../static/images/loc.png")
+              img(src="../static/images/phn.png")
+              img(src="../static/images/email.png")
+            div.info
+              p Plot no 80,Transport Nagar,Ludhiana,Punjab 141003
+              p +91 94172-94560 , 93561-84464
+              p srtc.saini@yahoo.com
+        div.office
+          h2 Corporate Office
+          div.off1
+            div.img3
+              img(src="../static/images/loc.png")
+              img(src="../static/images/phn.png")
+              img(src="../static/images/email.png")
+            div.info
+              p Plot no 105,Rathore nagar,khadgaon road wadi,Nagpur -440023
+              p +91 95697-23277
+              p srtc.saini@yahoo.com
+    section.message3(data-aos="zoom-in-up")
+      h2 Send Us a Message
+      p We would love to hear from you and see how we can help
+      form(action="/Contact_Us",method="post",id="myform" ,onSubmit="return submitForm(this)")
+        input(type="text",class="myinput",name="name",required placeholder="Enter Your Name")
+        input(type="phone",class="myinput",name="phone",required placeholder="🇮🇳 Enter Your Phone number")
+        input(type="email",class="myinput",name="email",required placeholder="Enter Your Email address")
+        input(type="text",class="myinput",name="Company_name",required placeholder="Enter Your Company name")
+        input(type="text",class="myinput input",name="desc",required placeholder="Enter Your Message")
+        button(class="btn4" value="Submit")
+          | Submit     
+  script(type='text/javascript').
+    $('#myDiv').floatingWhatsApp({
+    phone: '919417294560',
+    popupMessage: 'Hello, how can we help you?',
+    showPopup: true,
+    position: 'right'
+    });  
+  script(src="../static/preload.js")
+  script.
+    setTimeout(()=>{$('.loader_bg').fadeToggle();},800);
+  script(src='https://code.jquery.com/jquery-3.5.1.js')
+  script.
+    AOS.init( { duration: 2000, }); 
+          
+          

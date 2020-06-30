@@ -1,0 +1,53 @@
+extends base.pug
+block scripts
+    //- script(src="../static/about.js")
+    
+block style
+    link(rel='stylesheet', media='screen and (max-width: 1160px)', href='../static/phncon.css')
+    style
+        include ../static/style.css
+        include ../static/about.css
+block content
+    div#containers
+        div.image
+            div.main
+                h1 About US
+            hr
+        div.cont1
+            div.part1
+                div.part2
+                    h1 About S.R.T.C
+                    hr
+                    p We are pleased to introduce ourselves as one of leading Transport company, in India having its registered under the companies Act . 1956
+                        |  ,Our Registered office is regd. under Govt. Of India trade mark no. 2277715. & branch office is located in B-45, Nazamuddin East,Delhi -110013
+                div.part3
+                    h1 Our Mission
+                    hr
+                    p Our Head office & branches are well equipped and bearing run by efficient and experienced staff under the guidance of The Director , We are having our own fleet of services sufficient enough to meet the present requirements and attention at all the time to ensure entire satisfaction of our customers with our dedicated service that carry all types of materials on full load and we deem it great pleasure to work for your esteemed organisation. Hope you will consideration and favourable action so that we can prove our worth.
+                div.part4
+                    h1 Our specialies
+                    hr
+                    p Specialist in :- O.D.C. (Over Dimension Consignments) & Heavy machinery with carrying capacity (5-tons to 250-tons & Above) By Truck / Trailor / Hydrolic Axel Low bed Trailors Suppliers in All Over INDIA.
+            div.img1
+                img(src="../static/images/abim.jpg", alt="Image not loaded")    
+        div.part5
+            h1 Director's Profile
+            hr
+            div.img
+                img(src="../static/images/dr1.jpg", alt="Director image")          
+            div.box
+                section.childbox
+                    ol
+                        li &#9830; MR. BANARSI DASS SAINI  ( MANAGING DIRECTOR )
+                        p Mr. Banarsi Dass saini, the M.D. of the Company, has above three decades of experience in the Transport Bussiness.Mr. saini started this company in 2006. He is responsible for the overall working of the Company and is instrumental in making strategic decisions for the Company. 
+            div.img2
+                img(src="../static/images/dr2.jpg", alt="Director image") 
+            div.box
+                section.childbox    
+                    ol  
+                        li &#9830; Mr. RAJVEER SINGH RATHORE ( DIRECTOR )
+                        p Mr. Rajveer Singh Rathore , the Director of the company, has nearby two decades of experience in transport bussiness. Mr. rathore does the work from corporate office (Nagpur). Mr. Rathore joined the Board of Director with effect from 12 may 2007.  
+    script(src="../static/about.js")
+    script(src="../static/preload.js") 
+    script.
+        setTimeout(()=>{$('.loader_bg').fadeToggle();},800);

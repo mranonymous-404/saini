@@ -1,0 +1,131 @@
+extends base.pug
+block scripts
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
+    script(src="../static/aos.js")
+block style
+    style
+      include ../static/style.css
+      include ../static/aos.css
+      include ../static/service-area.css
+block content
+    section#containerz
+        h1.ser-area.center Our Network
+        .grid-container
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Haryana
+                ol
+                    li Sonipat
+                    li panipat  
+                    li Rohtak
+                    li Gurgaon
+                    li Manesar
+                    li Hisar
+                    li Faridabad
+                    li Bahadurgarh
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Rajasthan
+                ol
+                    li Jaipur
+                    li Jodhpur
+                    li Alwar
+                    li Shri Ganganagar
+                    li Bhilwara
+                    li Nasirabad
+                    li Ajmer
+                    li Kota
+                    li udaipur
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Gujrat
+                ol
+                    li Ahemdabad
+                    li Bhavnagar
+                    li rajkot
+                    li Baroda
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Maharastra
+                ol
+                    li Kohlapur
+                    li Orangabad
+                    li pune
+                    li Nasik
+                    li Nagpur
+                    li Mumbai
+                    li Kamptee
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Tamil-Nadu
+                ol
+                    li tripura
+                    li Coimbatore
+                    li Erode
+                    li Madurai
+                    li Trichi
+                    li Hosur
+                    li chennai (madras)
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Telangana (A.P.)
+                ol
+                    li Hedrabad
+                    li Vijaywara
+                    li Vishakapatnam
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Karnataka
+                ol
+                    li banglore
+                    li Mysore
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Delhi
+                ol
+                    li N.C.R
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Uttar Pradesh
+                ol
+                    li Noida
+                    li Gaziabad
+                    li Renukot
+                    li Meerut
+                    li kanpur
+                    li Lucknow
+                    li Saharanpur
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Uttarakhand
+                ol
+                    li Haridwar
+                    li Rishikesh
+                    li Rudharpur
+                    li Dehradun
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Punjab
+                ol
+                    li Amritsar
+                    li Jalandhar
+                    li Mandi-Govindgarh
+                    li Pathankot
+                    li Mansa
+                    li Bathinda
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Assam
+                ol
+                    li Guwahati
+                    li Siliguri
+                    li Dibrugarh
+                    li Silchar
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; West Bengal
+                ol
+                    li Culcutta
+                    li Bangaon
+                    li Howrah
+                    li Uluberia
+            .boxx(data-aos='fade-down')
+                h2.secondarytxt &#128666; Odisha
+                ol
+                    li Bhubaneshwar
+                    li Cuttack
+                    li Balasore
+    script(src="../static/preload.js")
+    script.
+      setTimeout(()=>{$('.loader_bg').fadeToggle();},800);
+    script(src='https://code.jquery.com/jquery-3.5.1.js')
+    script.
+     AOS.init( { duration: 2000, });

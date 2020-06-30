@@ -1,0 +1,43 @@
+extends base.pug
+block scripts
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
+    script(src="../static/aos.js")
+   
+block style
+    style 
+        include ../static/service.css
+        include ../static/style.css
+        include ../static/aos.css
+block content
+    div#containerx
+        div.image
+            div.main
+                h1 Our Services
+        #service-are
+            h2 FULL TRUCK/TRAILOR & CONTAINER LOAD SERVICES
+            .box5.b5
+                .t2(data-aos='fade-down-right')
+                    h3 DOOR COLLECTIONS | DOOR TO DOOR SERVICES
+                    p We provide all types of trucks,trailors & containers freight services to all over india with caring capacity of  7 tons to 31 tons and do so with almost commitment to the  maintenance of high quality standard.
+                        | Further, we provide our clientele with the precise service they require, including specialized Door Collections and Door-to-Door Services. SRTC also provides personalized solutions to customers, as well as professional assistance, at an all India level. Our team is highly immersed in providing and managing these services and in ensuring smooth functionality, throughout the process.
+                img.pa(src="../static/images/sr1.jpg")
+
+            .box5.b6
+                img.pa(src="../static/images/sr2.jpg")
+                .t2(data-aos='zoom-out-left')
+                    h3 PARCEL & PART-LOAD SERVICES
+                    p Suneha road transport corp. has been providing Parcel & Part-Load Services since 2007, covering all major towns and cities across India. Our services are dedicated to ensuring that the highest level of convenience is provided to our customers.  These services also include the transportation of smaller parcel loads across different destinations.
+            
+            .box5.b7
+                .t2(data-aos='fade-down-right')
+                    h3 ODC & HEAVY MACHINERY MOVEMENTS
+                    p We offer Project Cargo moving services to our customers in order to ensure that their goods are transported safely to its desired location. With the provision of specialized trailers and trucks,
+                        | We also provides trailor/hydrolic exel/low bed trailor with carring capacity 20  tons to 250 tons and above.
+                img.pa(src="../static/images/sr3.jpg")
+    script(src="../static/preload.js")
+    script.
+      setTimeout(()=>{$('.loader_bg').fadeToggle();},800);
+    script(src='https://code.jquery.com/jquery-3.5.1.js')
+    script.
+     AOS.init( { duration: 2000, });

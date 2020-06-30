@@ -1,0 +1,166 @@
+extends base.pug
+block scripts
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
+    script(src="../static/aos.js")
+block style
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+    link(rel='stylesheet', media='screen and (max-width: 1417px)', href='../static/phone.css')
+    style
+      include ../static/style.css
+      include ../static/aos.css  
+block content
+    // This is second container
+    .container
+      #myCarousel.carousel.slide(data-ride='carousel')
+        // Indicators
+        ol.carousel-indicators
+          li.active(data-target='#myCarousel', data-slide-to='0')
+          li(data-target='#myCarousel', data-slide-to='1')
+          li(data-target='#myCarousel', data-slide-to='2')
+          li(data-target='#myCarousel', data-slide-to='3')
+        // Wrapper for slides
+        .carousel-inner
+          .item.active
+            img(src='../static/slider/H1.jpg', alt='Los Angeles', style='width:100%;')
+            //- .carousel-caption
+            //-   h3 Los Angeles
+            //-   p LA is always so much fun!
+          .item
+            img(src='../static/slider/h2.jpg', alt='Chicago', style='width:100%;')
+            //- .carousel-caption
+            //-   h3 Chicago
+            //-   p Thank you, Chicago!
+          .item
+            img(src='../static/slider/h3.jpg', alt='New York', style='width:100%;')
+            //- .carousel-caption
+            //-   h3 New York
+            //-   p We love the Big Apple!
+          .item
+            img(src='../static/slider/h4.jpg', alt='New Delhi', style='width:100%;')
+            //- .carousel-caption
+            //-   h3 New Delhi
+            //-   p We love the Big Apple!
+        // Left and right controls
+        a.left.carousel-control(href='#myCarousel', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left
+          span.sr-only Previous
+        a.right.carousel-control(href='#myCarousel', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right
+          span.sr-only Next
+    #message(data-aos='zoom-in-down')
+      h1 Welcome
+      p
+        | We welcome you to S.R.T.C homepage.we are pleased to introduce ourself as one of leading Tranport company in INDIA having its registered under the Companies Act. 1956. We are here to Connect truck-drivers , industry and other entities across india with objective of making transportation quicker and efficient by providing better vehicle at affordable rates.We follow best practices and bussiness ethics for the benifit of customer and related community.
+    // This is service section
+    section.services-container
+      h1.primary.center Our Services
+      #services(data-aos='fade-down')
+        .box
+          img(src='../static/images/p1.jpg', alt='primary image')
+          h2.secondary.center Truck service
+          p.center.p1
+            | We provide all type of trucks having 7 - 32 tons weight of capacity for all over
+            | india.
+          //- button.btn Read More
+        .box
+          img(src='../static/images/p2.jpg', alt='primary image')
+          h2.secondary.center Container service
+          p.center.p1 We provide single and double XL high Q 32 foot container for all over india.
+          //- button.btn Read More
+        .box
+          img(src='../static/images/tr1.jpg', alt='primary image')
+          h2.secondary.center Trailor service
+          p.center.p1
+            | Over dimention consignments & heavy machinery with carrying capacity 20 to 250 Tons
+            | and above by trailor hHydolics Axel / Low Bed Trailor .
+          //- button.btn Read More
+    // this is service-area section
+    section.service-area
+      h1.container1.center Our Network
+      #services-area(data-aos='fade-right')
+        .ax1
+          .box1.x1
+            // <img src="../static/images/p1.jpg" alt="primary image">
+            h2.secondarytxt &#128666; Madhya Pradesh
+            ol.j1
+              li Gwalior
+              li Malanpur
+              li Bhopal
+              li Indore
+              li Pitampur
+          .box1.x2
+            // <img src="../static/images/p2.jpg" alt="primary image">
+            h2.secondarytxt.x2 &#128666; Chattisgarh
+            ol.j1
+              li Bhilai 
+              li Durg 
+              li Champa
+              li Korba 
+              li Raipur
+          .box1#x3
+            h2.secondarytxt#x4 &#128666; Jammu & Kashmir
+            ol#j2
+              li kathua
+              li Udhampur
+              li Sri-Nagar
+              li Anantnag
+              li Samba etc.
+            a(href='/service-area')
+              button#btn1 Read More
+        #map
+          iframe(data-aos='flip-left', data-aos-easing='ease-out-cubic', data-aos-duration='2000', src='https://www.google.com/maps/d/embed?mid=1fpkl6kIiqpFtKrZu6itJmJ82YvO1DqlC', width='450', height='300')
+    // This is partners section
+    section.partner-sec
+      h1.partner.center Our Supporters
+      #partner-are
+        .box3.b1
+          .t1(data-aos='fade-down-right')
+            h3.parse.float-panel Victory Transport Service
+            p
+              | Victory is working from 2007 in the market. Victory is a leading company covers many areas across india. victory is working with us since 2010. 
+          img.part(data-aos='flip-right', src='../static/images/par1.png', alt='Image not supported,reload again')
+        .box3.b2
+          img.part(data-aos='flip-left', src='../static/images/par2.png', alt='Image not supported,reload again')
+          .t1(data-aos='zoom-out-left')
+            h3.parse2 Suman Road Careers
+            p
+              | Suman road is another company working from 1994 . Suman is trusted firm working with us since 2005.
+
+        //- .box3.b3
+        //-   .t1(data-aos='zoom-out-right')
+        //-     h3.parse3 National Freight Carriers
+        //-     p
+        //-       | Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quaerat quia aliquid. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi placeat enim dicta voluptates sunt ab porro nam rem quaerat impedit, harum quae incidunt aliquid?
+        //-   img.part(data-aos='flip-down', src='../static/images/par3.png', alt='Image not supported,reload again')
+        //- hr
+    section.client-sec
+      h1.client.center Our Clients
+      #client-are
+        .boxa(data-aos='flip-down')
+          img(src="../static/clients/marshall.png", alt="image not loaded referesh again or try after some time")  
+        .boxa(data-aos='flip-down')
+          img(src="../static/clients/rockman.png", alt="image not loaded referesh again or try after some time")  
+        .boxa(data-aos='flip-down')
+          img(src="../static/clients/soma.png", alt="image not loaded referesh again or try after some time")  
+        .boxa(data-aos='flip-down')
+          img(src="../static/clients/spsingla.png", alt="image not loaded referesh again or try after some time")  
+        .boxa(data-aos='flip-down')
+          img(src="../static/clients/indianarmy.jpg", alt="image not loaded referesh again or try after some time")  
+        .boxa(data-aos='flip-down')
+          img(src="../static/clients/ashoka.png", alt="image not loaded referesh again or try after some time")  
+        .boxa(data-aos='flip-down')
+          img(src="../static/clients/gannon.png", alt="image not loaded referesh again or try after some time")  
+        .boxa(data-aos='flip-down')
+          img(src="../static/clients/larsen.jpg", alt="image not loaded referesh again or try after some time")  
+        .boxa(data-aos='flip-down')
+          img(src="../static/clients/VNC.jpg", alt="image not loaded referesh again or try after some time")  
+    script(src='https://code.jquery.com/jquery-3.5.1.js')
+    script.
+     AOS.init( { duration: 2000, });
+    script(src="../static/preload.js")
+    script.
+      setTimeout(()=>{
+        $('.loader_bg').fadeToggle();
+      },1500);
+      
